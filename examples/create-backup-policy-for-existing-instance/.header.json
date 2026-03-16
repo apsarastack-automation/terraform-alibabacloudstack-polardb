@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "为已有实例创建备份策略",
+    "en-US": "Create Backup Policy for Existing Instance"
+  },
+  "overview": {
+    "zh-Hans": "此示例演示如何为已存在的PolarDB实例创建备份策略。",
+    "en-US": "This example demonstrates how to create a backup policy for an existing PolarDB instance."
+  },
+  "description": {
+    "zh-Hans": "为已有PolarDB实例创建备份策略的示例",
+    "en-US": "Example for creating backup policy for existing PolarDB instance"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "使用已有PolarDB实例",
+    "en-US": "Use Existing PolarDB Instance"
+  },
+  "overview": {
+    "zh-Hans": "此示例演示如何在已有的PolarDB实例上创建数据库和账号。",
+    "en-US": "This example demonstrates how to create databases and accounts on an existing PolarDB instance."
+  },
+  "description": {
+    "zh-Hans": "在已有PolarDB实例上创建数据库和账号的示例",
+    "en-US": "Example for creating databases and accounts on an existing PolarDB instance"
+  }
+}

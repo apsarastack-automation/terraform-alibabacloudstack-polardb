@@ -1,0 +1,121 @@
+{
+  "db_instance_id": {
+    "description": "(Required) The ID of the existing PolarDB instance. This module does NOT create instances - only manages backup policy for existing ones.",
+    "type": "string",
+    "optional": false,
+    "i18n": {
+      "zh-Hans": "（必填）现有PolarDB实例的ID。本模块不会创建实例，仅用于管理现有实例的备份策略。",
+      "en-US": "(Required) The ID of the existing PolarDB instance. This module does NOT create instances—only manages backup policies for existing ones."
+    }
+  },
+  "backup_retention_period": {
+    "description": "The retention period of data backup files. Valid values: 7 to 730.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "数据备份文件的保留期限，有效值为7至730天。",
+      "en-US": "The retention period for data backup files. Valid values: 7 to 730."
+    },
+    "default": "7"
+  },
+  "preferred_backup_period": {
+    "description": "The backup cycle. Separate multiple values with commas. Valid values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份周期。多个值用逗号分隔。有效值：周一、周二、周三、周四、周五、周六、周日。",
+      "en-US": "The backup cycle. Separate multiple values with commas. Valid values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday."
+    },
+    "default": "Monday,Wednesday,Friday"
+  },
+  "preferred_backup_time": {
+    "description": "The backup time in format HH:mmZ-HH:mmZ (UTC time).",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份时间，格式为 HH:mmZ-HH:mmZ（UTC 时间）。",
+      "en-US": "The backup time in HH:mmZ-HH:mmZ format (UTC time)."
+    },
+    "default": "02:00Z-03:00Z"
+  },
+  "enable_backup_log": {
+    "description": "Whether to enable log backup. Valid values: 1 (enabled), 0 (disabled).",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "是否启用日志备份。取值：1（启用）、0（禁用）。",
+      "en-US": "Whether to enable log backup. Valid values: 1 (enabled), 0 (disabled)."
+    },
+    "default": "1"
+  },
+  "compress_type": {
+    "description": "The backup compression method. Valid values: 0 (no compression), 1 (zlib), 2 (parallel zlib), 4 (quicklz), 8 (MySQL 8.0 quicklz).",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份压缩方法。有效值：0（不压缩）、1（zlib）、2（并行 zlib）、4（QuickLZ）、8（MySQL 8.0 QuickLZ）。",
+      "en-US": "The backup compression method. Valid values: 0 (no compression), 1 (zlib), 2 (parallel zlib), 4 (QuickLZ), 8 (MySQL 8.0 QuickLZ)."
+    },
+    "default": "1"
+  },
+  "backup_policy_mode": {
+    "description": "The backup policy mode. Valid values: DataBackupPolicy, LogBackupPolicy.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份策略模式。有效值：DataBackupPolicy（数据备份策略）、LogBackupPolicy（日志备份策略）。",
+      "en-US": "The backup policy mode. Valid values: DataBackupPolicy, LogBackupPolicy."
+    },
+    "default": "DataBackupPolicy"
+  },
+  "backup_log": {
+    "description": "Log backup switch. Value: Enable | Disabled.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "日志备份开关。值：启用 | 禁用。",
+      "en-US": "Log backup switch. Value: Enable | Disable."
+    },
+    "default": "Enable"
+  },
+  "high_space_usage_protection": {
+    "description": "Whether to force Binlog cleanup when space usage is high. Valid values: Disable, Enable.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "当磁盘空间使用率较高时，是否强制清理二进制日志。有效值：禁用、启用。",
+      "en-US": "Whether to force binlog cleanup when disk space usage is high. Valid values: Disable, Enable."
+    },
+    "default": "Enable"
+  },
+  "local_log_retention_hours": {
+    "description": "Log backup local retention hours.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "日志备份本地保留小时数。",
+      "en-US": "Log backup local retention hours."
+    },
+    "default": "24"
+  },
+  "local_log_retention_space": {
+    "description": "The maximum circular space usage of local logs. Value: 0~50.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "本地日志的最大循环空间使用量。取值范围：0~50。",
+      "en-US": "The maximum circular space usage for local logs. Value: 0–50."
+    },
+    "default": "20"
+  },
+  "log_backup_retention_period": {
+    "description": "The retention period of log backup files. Valid values: 7 to 730.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "日志备份文件的保留期限，有效值为7至730。",
+      "en-US": "The retention period for log backup files. Valid values: 7 to 730."
+    },
+    "default": "7"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "db_instance_id": {
+    "description": "The ID of an existing PolarDB instance.",
+    "type": "string",
+    "optional": false,
+    "i18n": {
+      "zh-Hans": "已有PolarDB实例的ID。",
+      "en-US": "The ID of an existing PolarDB instance."
+    }
+  },
+  "databases": {
+    "description": "Map of databases to create.",
+    "type": "map(object({\n    character_set_name = optional(string, \"utf8mb4\")\n    description        = optional(string, \"\")\n  }))",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "要创建的数据库映射。",
+      "en-US": "Map of databases to create."
+    },
+    "default": "{}"
+  },
+  "accounts": {
+    "description": "Map of accounts to create.",
+    "type": "map(object({\n    password           = string\n    account_type       = optional(string, \"Normal\")\n    account_privileges = optional(map(string), {})\n  }))",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "要创建的账号映射。",
+      "en-US": "Map of accounts to create."
+    },
+    "default": "{}"
+  }
+}

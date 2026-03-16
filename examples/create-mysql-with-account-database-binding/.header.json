@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "创建MySQL实例并绑定账号数据库",
+    "en-US": "Create MySQL Instance with Account-Database Binding"
+  },
+  "overview": {
+    "zh-Hans": "此示例演示如何创建PolarDB MySQL实例，并使用account_database_binding资源创建数据库、账号并绑定权限。",
+    "en-US": "This example demonstrates how to create a PolarDB MySQL instance and create databases, accounts, and bind privileges using the account_database_binding resource."
+  },
+  "description": {
+    "zh-Hans": "创建MySQL实例并使用account_database_binding绑定账号数据库权限的示例",
+    "en-US": "Example for creating MySQL instance and binding account-database privileges using account_database_binding"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "db_instance_id": {
+    "description": "The ID of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的ID。",
+      "en-US": "The ID of the PolarDB instance."
+    }
+  },
+  "connection_string": {
+    "description": "The connection string of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的连接地址。",
+      "en-US": "The connection string of the PolarDB instance."
+    }
+  },
+  "port": {
+    "description": "The database connection port.",
+    "i18n": {
+      "zh-Hans": "数据库连接端口。",
+      "en-US": "The database connection port."
+    }
+  },
+  "database_names": {
+    "description": "List of created database names.",
+    "i18n": {
+      "zh-Hans": "创建的数据库名称列表。",
+      "en-US": "List of created database names."
+    }
+  },
+  "account_names": {
+    "description": "List of created account names.",
+    "i18n": {
+      "zh-Hans": "创建的账号名称列表。",
+      "en-US": "List of created account names."
+    }
+  },
+  "binding_mode": {
+    "description": "The mode used for account-database privilege binding.",
+    "i18n": {
+      "zh-Hans": "用于账号数据库权限绑定的模式。",
+      "en-US": "The mode used for account-database privilege binding."
+    }
+  }
+}

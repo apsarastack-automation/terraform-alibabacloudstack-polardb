@@ -1,0 +1,65 @@
+{
+  "db_instance_id": {
+    "description": "The ID of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的ID。",
+      "en-US": "The ID of the PolarDB instance."
+    }
+  },
+  "connection_string": {
+    "description": "The connection string of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的连接地址。",
+      "en-US": "The connection string of the PolarDB instance."
+    }
+  },
+  "port": {
+    "description": "The database connection port.",
+    "i18n": {
+      "zh-Hans": "数据库连接端口。",
+      "en-US": "The database connection port."
+    }
+  },
+  "database_names": {
+    "description": "List of created database names.",
+    "i18n": {
+      "zh-Hans": "创建的数据库名称列表。",
+      "en-US": "List of created database names."
+    }
+  },
+  "account_names": {
+    "description": "List of created account names.",
+    "i18n": {
+      "zh-Hans": "创建的账号名称列表。",
+      "en-US": "List of created account names."
+    }
+  },
+  "backup_policy_applied": {
+    "description": "Whether the backup policy was applied.",
+    "i18n": {
+      "zh-Hans": "备份策略是否已应用。",
+      "en-US": "Whether the backup policy was applied."
+    }
+  },
+  "backup_retention_period": {
+    "description": "The retention period of data backup files.",
+    "i18n": {
+      "zh-Hans": "数据备份文件的保留期限",
+      "en-US": "The retention period of data backup files."
+    }
+  },
+  "preferred_backup_period": {
+    "description": "The backup cycle.",
+    "i18n": {
+      "zh-Hans": "备份周期",
+      "en-US": "The backup cycle."
+    }
+  },
+  "preferred_backup_time": {
+    "description": "The backup time.",
+    "i18n": {
+      "zh-Hans": "备份时间。",
+      "en-US": "The backup time."
+    }
+  }
+}

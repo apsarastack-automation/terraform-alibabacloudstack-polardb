@@ -1,0 +1,212 @@
+{
+  "name": {
+    "description": "The name of the PolarDB instance.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "PolarDB实例的名称。",
+      "en-US": "The name of the PolarDB instance."
+    },
+    "default": ""
+  },
+  "db_instance_id": {
+    "description": "The ID of an existing PolarDB instance. If set, no new instance will be created.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "已有PolarDB实例的ID。如果设置，则不会创建新实例。",
+      "en-US": "The ID of an existing PolarDB instance. If set, no new instance will be created."
+    },
+    "default": ""
+  },
+  "engine": {
+    "description": "The database engine type. Valid values: PolarDB_PG MySQL PolarDB_PPAS.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "数据库引擎类型。有效值：PolarDB_PG、MySQL、PolarDB_PPAS。",
+      "en-US": "The database engine type. Valid values: PolarDB_PG, MySQL, PolarDB_PPAS."
+    },
+    "default": "MySQL"
+  },
+  "engine_version": {
+    "description": "The database engine version.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "数据库引擎版本。",
+      "en-US": "The database engine version."
+    },
+    "default": "8.0"
+  },
+  "storage": {
+    "description": "The storage size of the instance in GB.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "实例的存储大小（GB）。",
+      "en-US": "The storage size of the instance in GB."
+    },
+    "default": "20"
+  },
+  "storage_type": {
+    "description": "The storage type of the instance. Valid values: local_ssd, cloud_ssd, cloud_essd.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "实例的存储类型。有效值：local_ssd、cloud_ssd、cloud_essd。",
+      "en-US": "The storage type of the instance. Valid values: local_ssd, cloud_ssd, cloud_essd."
+    },
+    "default": "local_ssd"
+  },
+  "vswitch_id": {
+    "description": "The ID of the VSwitch for network configuration.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "用于网络配置的交换机ID。",
+      "en-US": "The ID of the VSwitch for network configuration."
+    },
+    "default": ""
+  },
+  "security_ips": {
+    "description": "List of security IPs that are allowed to access the instance.",
+    "type": "list(string)",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "允许访问实例的安全IP列表。",
+      "en-US": "List of security IPs that are allowed to access the instance."
+    },
+    "default": "[]"
+  },
+  "parameters": {
+    "description": "Map of database parameters to set.",
+    "type": "map(string)",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "要设置的数据库参数映射。",
+      "en-US": "Map of database parameters to set."
+    },
+    "default": "{}"
+  },
+  "databases": {
+    "description": "Map of databases to create. Key is database name, value is database configuration.",
+    "type": "map(object({\n    character_set_name = optional(string, \"utf8mb4\")\n    description        = optional(string, \"\")\n  }))",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "要创建的数据库映射。键为数据库名称，值为数据库配置。",
+      "en-US": "Map of databases to create. Key is database name, value is database configuration."
+    },
+    "default": "{}"
+  },
+  "accounts": {
+    "description": "Map of accounts to create. Key is account name, value is account configuration.",
+    "type": "map(object({\n    password           = string\n    account_type       = optional(string, \"Normal\")\n    account_privileges = optional(map(string), {})\n  }))",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "要创建的账号映射。键为账号名称，值为账号配置。",
+      "en-US": "Map of accounts to create. Key is account name, value is account configuration."
+    },
+    "default": "{}"
+  },
+  "use_account_database_binding": {
+    "description": "Whether to use alibabacloudstack_polardb_account_database_binding resource instead of alibabacloudstack_polardb_account_privilege for account privileges.",
+    "type": "bool",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "是否使用alibabacloudstack_polardb_account_database_binding资源替代alibabacloudstack_polardb_account_privilege来管理账号权限。",
+      "en-US": "Whether to use alibabacloudstack_polardb_account_database_binding resource instead of alibabacloudstack_polardb_account_privilege for account privileges."
+    },
+    "default": "false"
+  },
+  "backup_policy": {
+    "description": "Backup policy configuration object. Set to null to skip backup policy creation.",
+    "type": "object({\n    backup_retention_period     = optional(number, 7)\n    preferred_backup_period     = optional(string, \"Monday,Wednesday,Friday\")\n    preferred_backup_time       = optional(string, \"02:00Z-03:00Z\")\n    enable_backup_log           = optional(number, 1)\n    compress_type               = optional(number, 1)\n    backup_policy_mode          = optional(string, \"DataBackupPolicy\")\n    backup_log                  = optional(string, \"Enable\")\n    high_space_usage_protection = optional(string, \"Enable\")\n    local_log_retention_hours   = optional(number, 24)\n    local_log_retention_space   = optional(number, 20)\n    log_backup_retention_period = optional(number, 7)\n  })",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份策略配置对象。设置为 null 可跳过备份策略的创建。",
+      "en-US": "Backup policy configuration object. Set to null to skip backup policy creation."
+    },
+    "default": "null"
+  },
+  "db_connection_prefix": {
+    "description": "The connection prefix for the database connection.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "数据库连接的连接前缀。",
+      "en-US": "The connection prefix for the database connection."
+    },
+    "default": ""
+  },
+  "port": {
+    "description": "The port number for the database connection.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "数据库连接的端口号。",
+      "en-US": "The port number for the database connection."
+    },
+    "default": "3306"
+  },
+  "encryption_key": {
+    "description": "The key ID of the disk encryption in the same region.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "同区域磁盘加密的密钥ID。",
+      "en-US": "The key ID of the disk encryption in the same region."
+    },
+    "default": ""
+  },
+  "role_arn": {
+    "description": "The Global Resource Descriptor (ARN) that authorizes the POLARDB cloud service account to access KMS.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "授权POLARDB云服务账号访问KMS的全局资源描述符(ARN)。",
+      "en-US": "The Global Resource Descriptor (ARN) that authorizes the POLARDB cloud service account to access KMS."
+    },
+    "default": ""
+  },
+  "tags": {
+    "description": "Tags to assign to the resources.",
+    "type": "map(string)",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "要分配给资源的标签。",
+      "en-US": "Tags to assign to the resources."
+    },
+    "default": "{}"
+  },
+  "db_instance_class": {
+    "description": "The instance type/class of the PolarDB instance.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "PolarDB 实例的实例类型/规格。",
+      "en-US": "The instance type or class of the PolarDB instance."
+    },
+    "default": ""
+  },
+  "encryption": {
+    "description": "Whether encryption is enabled for the instance.",
+    "type": "bool",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "实例是否启用了加密。",
+      "en-US": "Whether encryption is enabled for the instance."
+    },
+    "default": "false"
+  },
+  "tde_status": {
+    "description": "The Transparent Data Encryption (TDE) status of the instance.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "实例的透明数据加密（TDE）状态。",
+      "en-US": "The Transparent Data Encryption (TDE) status of the instance."
+    },
+    "default": ""
+  }
+}

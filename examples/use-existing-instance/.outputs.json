@@ -1,0 +1,23 @@
+{
+  "db_instance_id": {
+    "description": "The ID of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的ID。",
+      "en-US": "The ID of the PolarDB instance."
+    }
+  },
+  "database_names": {
+    "description": "List of created database names.",
+    "i18n": {
+      "zh-Hans": "创建的数据库名称列表。",
+      "en-US": "List of created database names."
+    }
+  },
+  "account_names": {
+    "description": "List of created account names.",
+    "i18n": {
+      "zh-Hans": "创建的账号名称列表。",
+      "en-US": "List of created account names."
+    }
+  }
+}

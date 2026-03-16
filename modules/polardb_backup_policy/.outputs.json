@@ -1,0 +1,51 @@
+{
+  "db_instance_id": {
+    "description": "The ID of the PolarDB instance for which the backup policy is configured.",
+    "i18n": {
+      "zh-Hans": "配置备份策略的PolarDB实例ID。",
+      "en-US": "The ID of the PolarDB instance for which the backup policy is configured."
+    }
+  },
+  "backup_policy_applied": {
+    "description": "Whether the backup policy was applied.",
+    "i18n": {
+      "zh-Hans": "备份策略是否已应用。",
+      "en-US": "Whether the backup policy was applied."
+    }
+  },
+  "backup_retention_period": {
+    "description": "The retention period of data backup files.",
+    "i18n": {
+      "zh-Hans": "数据备份文件的保留期限",
+      "en-US": "The retention period of data backup files."
+    }
+  },
+  "preferred_backup_period": {
+    "description": "The backup cycle.",
+    "i18n": {
+      "zh-Hans": "备份周期",
+      "en-US": "The backup cycle."
+    }
+  },
+  "preferred_backup_time": {
+    "description": "The backup time.",
+    "i18n": {
+      "zh-Hans": "备份时间。",
+      "en-US": "The backup time."
+    }
+  },
+  "enable_backup_log": {
+    "description": "Whether log backup is enabled.",
+    "i18n": {
+      "zh-Hans": "是否启用了日志备份。",
+      "en-US": "Whether log backup is enabled."
+    }
+  },
+  "compress_type": {
+    "description": "The backup compression method.",
+    "i18n": {
+      "zh-Hans": "备份压缩方法。",
+      "en-US": "The backup compression method."
+    }
+  }
+}

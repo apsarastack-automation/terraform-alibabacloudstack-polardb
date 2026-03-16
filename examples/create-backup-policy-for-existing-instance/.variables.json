@@ -1,0 +1,61 @@
+{
+  "db_instance_id": {
+    "description": "The ID of an existing PolarDB instance.",
+    "type": "string",
+    "optional": false,
+    "i18n": {
+      "zh-Hans": "已有PolarDB实例的ID。",
+      "en-US": "The ID of an existing PolarDB instance."
+    }
+  },
+  "backup_retention_period": {
+    "description": "The retention period of data backup files. Valid values: 7 to 730.",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "数据备份文件的保留天数。有效值：7~730。",
+      "en-US": "The retention period of data backup files. Valid values: 7 to 730."
+    },
+    "default": "7"
+  },
+  "preferred_backup_period": {
+    "description": "The backup cycle. Separate multiple values with commas. Valid values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份周期。多个值用逗号分隔。有效值：Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday。",
+      "en-US": "The backup cycle. Separate multiple values with commas. Valid values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday."
+    },
+    "default": "Monday,Wednesday,Friday"
+  },
+  "preferred_backup_time": {
+    "description": "The backup time in format HH:mmZ-HH:mmZ (UTC time).",
+    "type": "string",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份时间，格式：HH:mmZ-HH:mmZ（UTC时间）。",
+      "en-US": "The backup time in format HH:mmZ-HH:mmZ (UTC time)."
+    },
+    "default": "02:00Z-03:00Z"
+  },
+  "enable_backup_log": {
+    "description": "Whether to enable log backup. Valid values: 1 (enabled), 0 (disabled).",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "是否启用日志备份。有效值：1（启用），0（禁用）。",
+      "en-US": "Whether to enable log backup. Valid values: 1 (enabled), 0 (disabled)."
+    },
+    "default": "1"
+  },
+  "compress_type": {
+    "description": "The backup compression method. Valid values: 0 (no compression), 1 (zlib), 2 (parallel zlib), 4 (quicklz), 8 (MySQL 8.0 quicklz).",
+    "type": "number",
+    "optional": true,
+    "i18n": {
+      "zh-Hans": "备份压缩方式。有效值：0（不压缩），1（zlib），2（并行zlib），4（quicklz），8（MySQL 8.0 quicklz）。",
+      "en-US": "The backup compression method. Valid values: 0 (no compression), 1 (zlib), 2 (parallel zlib), 4 (quicklz), 8 (MySQL 8.0 quicklz)."
+    },
+    "default": "1"
+  }
+}

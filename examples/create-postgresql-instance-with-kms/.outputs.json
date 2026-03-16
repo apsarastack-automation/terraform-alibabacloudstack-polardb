@@ -1,0 +1,37 @@
+{
+  "db_instance_id": {
+    "description": "The ID of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的ID。",
+      "en-US": "The ID of the PolarDB instance."
+    }
+  },
+  "connection_string": {
+    "description": "The connection string of the PolarDB instance.",
+    "i18n": {
+      "zh-Hans": "PolarDB实例的连接地址。",
+      "en-US": "The connection string of the PolarDB instance."
+    }
+  },
+  "port": {
+    "description": "The database connection port.",
+    "i18n": {
+      "zh-Hans": "数据库连接端口。",
+      "en-US": "The database connection port."
+    }
+  },
+  "engine": {
+    "description": "The database engine type.",
+    "i18n": {
+      "zh-Hans": "数据库引擎类型。",
+      "en-US": "The database engine type."
+    }
+  },
+  "encryption_enabled": {
+    "description": "Whether encryption is enabled for the instance.",
+    "i18n": {
+      "zh-Hans": "实例是否启用了加密。",
+      "en-US": "Whether encryption is enabled for the instance."
+    }
+  }
+}

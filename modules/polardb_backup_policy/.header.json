@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "PolarDB 备份策略配置模块",
+    "en-US": "PolarDB Backup Policy Configuration Module"
+  },
+  "overview": {
+    "zh-Hans": "该Terraform模块用于为已存在的阿里云PolarDB数据库实例配置精细化的自动备份策略，不涉及实例创建，仅管理备份生命周期、备份时间窗口、日志备份及空间保护等核心备份行为。",
+    "en-US": "This Terraform module configures fine-grained automated backup policies for an existing Alibaba Cloud PolarDB database instance. It does not create the instance, but solely manages core backup behaviors—including backup lifecycle, backup time windows, log backups, and storage space protection."
+  },
+  "description": {
+    "zh-Hans": "该模块通过 `alibabacloudstack_polardb_backuppolicy` 资源统一管理 PolarDB 实例的备份治理策略，支持全量备份保留周期、每周备份周期（例如 `Monday,Wednesday,Friday`）、每日备份时间窗口（例如 `02:00Z-03:00Z`）、是否启用日志备份、压缩算法选择、备份模式（标准模式或快速备份模式）、日志备份开关及保留时长、本地日志磁盘空间与时间双重保护阈值（`local_log_retention_hours` 和 `local_log_retention_space`），以及高磁盘使用率下的自动防护机制（`high_space_usage_protection`）。所有参数均通过变量注入，确保策略具备可复用性、可版本化能力及环境差异化配置能力，满足企业级数据合规性与灾备治理要求。",
+    "en-US": "This module uniformly manages the backup governance policies for PolarDB instances through the `alibabacloudstack_polardb_backuppolicy` resource, supporting parameters including full backup retention period, weekly backup schedule (e.g., `Monday,Wednesday,Friday`), daily backup time window (e.g., `02:00Z-03:00Z`), log backup enablement, compression algorithm selection, backup mode (standard or fast backup mode), log backup toggle and retention duration, dual-threshold protection for local log disk space and time (`local_log_retention_hours` and `local_log_retention_space`), and automatic protection under high disk utilization (`high_space_usage_protection`). All parameters are injected via variables to ensure policy reusability, versionability, and environment-specific configurability, meeting enterprise-grade data compliance and disaster recovery governance requirements."
+  }
+}

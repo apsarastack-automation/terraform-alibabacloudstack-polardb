@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "创建完整的PolarDB实例",
+    "en-US": "Create Complete PolarDB Instance"
+  },
+  "overview": {
+    "zh-Hans": "此示例演示如何创建完整的PolarDB实例，包括VPC、数据库、账号、备份策略和连接配置。",
+    "en-US": "This example demonstrates how to create a complete PolarDB instance including VPC, databases, accounts, backup policy, and connection configuration."
+  },
+  "description": {
+    "zh-Hans": "创建完整PolarDB实例的示例",
+    "en-US": "Example for creating a complete PolarDB instance"
+  }
+}

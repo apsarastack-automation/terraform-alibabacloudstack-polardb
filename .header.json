@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "PolarDB实例模块",
+    "en-US": "PolarDB Instance Module"
+  },
+  "overview": {
+    "zh-Hans": "该模块用于在阿里云 Stack 上创建PolarDB实例、数据库、账号、备份策略和连接配置。",
+    "en-US": "This module is used to create PolarDB instances, databases, accounts, backup policies, and connection configurations on Alibaba Cloud Stack."
+  },
+  "description": {
+    "zh-Hans": "用于创建PolarDB实例、数据库、账号、备份策略和连接配置的Terraform模块",
+    "en-US": "Terraform module for creating PolarDB instances, databases, accounts, backup policies, and connection configurations"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "zh-Hans": "创建KMS加密的PostgreSQL实例",
+    "en-US": "Create PostgreSQL Instance with KMS Encryption"
+  },
+  "overview": {
+    "zh-Hans": "此示例演示如何使用KMS密钥加密创建PolarDB PostgreSQL实例。",
+    "en-US": "This example demonstrates how to create a PolarDB PostgreSQL instance with KMS key encryption."
+  },
+  "description": {
+    "zh-Hans": "使用KMS加密创建PolarDB PostgreSQL实例的示例",
+    "en-US": "Example for creating PolarDB PostgreSQL instance with KMS encryption"
+  }
+}

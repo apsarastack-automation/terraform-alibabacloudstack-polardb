@@ -5,6 +5,11 @@ output "db_instance_id" {
   value       = module.instance.db_instance_id
 }
 
+output "instance_name" {
+  description = "The description (name) of the PolarDB instance."
+  value       = module.instance.instance_name
+}
+
 output "connection_string" {
   description = "The connection string of the PolarDB instance."
   value       = module.instance.connection_string

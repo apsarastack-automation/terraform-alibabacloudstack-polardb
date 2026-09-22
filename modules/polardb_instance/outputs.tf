@@ -3,6 +3,11 @@ output "db_instance_id" {
   value       = local.create_instance ? alibabacloudstack_polardb_dbinstance.default[0].id : var.db_instance_id
 }
 
+output "instance_name" {
+  description = "The description (name) of the PolarDB instance."
+  value       = local.create_instance ? alibabacloudstack_polardb_dbinstance.default[0].db_instance_description : var.name
+}
+
 output "connection_string" {
   description = "The connection string of the PolarDB instance."
   value       = length(alibabacloudstack_polardb_dbconnection.default) > 0 ? alibabacloudstack_polardb_dbconnection.default[0].connection_string : null

@@ -36,7 +36,7 @@ locals {
 resource "alibabacloudstack_polardb_dbinstance" "default" {
   count = local.create_instance ? 1 : 0
 
-  instance_name            = var.name
+  db_instance_description  = var.name
   engine                   = var.engine
   engine_version           = var.engine_version
   db_instance_class        = local.db_instance_class
